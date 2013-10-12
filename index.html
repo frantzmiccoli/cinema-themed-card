@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="lib/lesshat.less" />
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+
+    <script type="text/javascript">
+        less = {
+            env: "development", // or "production"
+            async: false,       // load imports async
+            fileAsync: false,   // load imports async when in a page under
+            // a file protocol
+            poll: 1000,         // when in watch mode, time in ms between polls
+            functions: {},      // user functions, keyed by name
+            dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+            relativeUrls: false,// whether to adjust url's to be relative
+            // if false, url's are already relative to the
+            // entry less file
+            rootpath: ":/a.com/"// a path to add on to the start of every url
+            //resource
+        };
+    </script>
+    <script src="lib/less.js" type="text/javascript"></script>
+</head>
+<body style="background-image: url(img/sandpaper.png);">
+
+    <div id="clap">
+        <div id="clap-bar-top" class="clap-bar">
+            <div class="clap-screw"></div>
+        </div>
+        <div id="clap-block">
+            <div class="clap-bar">
+                <div class="clap-screw"></div>
+            </div>
+            <div id="clap-big-area">
+                
+            </div>
+            <div id="clap-info-1">
+                <div class="clap-info-label"></div>
+                <div class="clap-info-value"></div>
+                Hello
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
