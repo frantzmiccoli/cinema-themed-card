@@ -1,5 +1,29 @@
 ;(function() {
 
+    if (typeof(window.context) == "undefined") {
+        try {
+            // we try to load the variable from the url
+            window.context = hashVariableManager.loadVariableFromHash();
+        } catch(error) {
+            // this is what you context variable should look like
+            window.context = {
+                clap_title: "Cinema greeting card",
+                clap_paragraph_1: "HTML5 + CSS3 + three lines of JS" +
+                ", the code is not clean but it's clear enough to let you customize.",
+                clap_paragraph_2: "",
+                clap_label_1: "What",
+                clap_value_1: "Greeting card",
+                clap_label_2: "HTML",
+                clap_value_2: "&CSS3",
+                clap_label_3: "JQuery",
+                clap_value_3: "&handlebars",
+
+                film_label: 'With real chunk of film inside',
+                film_pic_url: 'http://www.atomicarchive.com/Effects/Images/WE12.jpg'
+            };
+        }
+    }
+
     var FilmController = function() {
         this._init = function() {
             this._fillTemplate();
@@ -55,6 +79,7 @@
     };
 
     $(document).ready(function() {
+
         setTimeout(function() {
             new FilmController();
         }, 1000);

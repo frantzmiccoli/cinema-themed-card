@@ -5,7 +5,6 @@
 @film-picture-width: 14.9em;
 @film-square-width: 0.8em;
 
-
 body {
   background-image: url(img/sandpaper.png);
   text-align: center;
@@ -69,10 +68,41 @@ body, div, p, span {
 #clap-bar-top {
   .shadow;
   .transform-origin(1% 50%);
+  .animation(~'clap-bar-top-animation 5s infinite');
   .rotate(-20deg);
   position:relative;
   top: 0.2em;
 }
+
+@-webkit-keyframes clap-bar-top-animation {.clap-bar-top-animation-frames;}
+@-moz-keyframes clap-bar-top-animation {.clap-bar-top-animation-frames;}
+@-ms-keyframes clap-bar-top-animation {.clap-bar-top-animation-frames;}
+@-o-keyframes clap-bar-top-animation {.clap-bar-top-animation-frames;}
+@keyframes clap-bar-top-animation {.clap-bar-top-animation-frames;}
+
+.clap-bar-top-animation-frames {
+  from {
+    .rotate(-20deg);
+  }
+
+  5% {
+    .rotate(0deg);
+  }
+
+  6% {
+    .rotate(0deg);
+  }
+
+  15% {
+    .rotate(-20deg);
+  }
+
+  to {
+    .rotate(-20deg);
+  }
+}
+
+
 
 #clap-block {
   .shadow;
