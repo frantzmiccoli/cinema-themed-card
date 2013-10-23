@@ -25,12 +25,24 @@ body, div, p, span {
   font-family: 'Cedarville Cursive';
 }
 
+.clear {
+  clear: both;
+}
+
+#main-wrapper {
+  display: inline-block;
+}
+
 #clap {
   .hand-writting;
 
   display:inline-block;
   padding: 3em;
   width: @clap-width;
+
+  position: relative;
+  float: left;
+  top: 3em;
 }
 
 .black-border {
@@ -157,6 +169,7 @@ body, div, p, span {
   .shadow;
   position: relative;
   top: 4em;
+  float: left;
   display: inline-block;
   background: black;
   .rotate(10deg);
